@@ -195,10 +195,7 @@ public class StockServiceImpl implements StockService {
                 reciverStore.setStock(reciverUpdatedStock);
                 senderStore.setStock(senderUpdatedStock);
 
-                storeRepo.save(reciverStore);
-                System.out.println("reciver updated");
-                System.out.println(senderUpdatedStock.size());
-                storeRepo.save(senderStore);
+
 
 
                 transection.setReciver_store(reciverStore);
@@ -207,7 +204,11 @@ public class StockServiceImpl implements StockService {
                 transection.setDateTime_Of_sending(LocalDateTime.now());
                 transection.setTotal_amount_of_products(productQuantity*item.getMarket_price());
 
-                return transectionRepo.save(transection);
+                senderStore.add_Transection_between_store(transection);
+                storeRepo.save(reciverStore);
+
+                storeRepo.save(senderStore);
+                return transection;
 
             }
             else throw new ProductException("Quantity is not sufficient in your stock");
