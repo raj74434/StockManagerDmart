@@ -2,6 +2,7 @@ package com.storeManager.Dmart.dto;
 
 import lombok.Data;
 
+//  It help in update stock by taking input from user
 @Data
 public class StockProductDTO {
 

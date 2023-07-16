@@ -1,7 +1,6 @@
 package com.storeManager.Dmart.controllers;
 
-import com.storeManager.Dmart.Services.StockService;
-import com.storeManager.Dmart.Services.StoreService;
+import com.storeManager.Dmart.services.StoreService;
 import com.storeManager.Dmart.dto.StoreDTO;
 import com.storeManager.Dmart.models.Store;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +18,7 @@ public class StoreController {
     @Autowired
     private StoreService storeService;
 
+//    It create a new store in our database
     @PostMapping("/create")
     public ResponseEntity<Store> createStore(@RequestBody StoreDTO storeDTO){
         System.out.println(storeDTO.getStoreName());

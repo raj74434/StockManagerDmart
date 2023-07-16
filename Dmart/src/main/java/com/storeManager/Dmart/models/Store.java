@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//  All details of store
 @Data
 @Entity
 public class Store {

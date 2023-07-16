@@ -15,19 +15,19 @@ public class StockProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer stock_product_id;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToOne
-    private Store store;
+    private Store store;             //Store at which this product is present
 
     @JsonIgnore
     @OneToOne
-    private Product product;
+    private Product product;        //about product
 
-    private Integer quantity;
+    private Integer quantity;      // at  which quantity this product is present
 
-    private LocalDateTime lastUpdatedDateTime;
+    private LocalDateTime lastUpdatedDateTime;   // at which time it is updated  last
 
-    private LocalDate date_of_enter;
+    private LocalDate date_of_enter;    // when this product get  available or inserted  in stock
 
 
 

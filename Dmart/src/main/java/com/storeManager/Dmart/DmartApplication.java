@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import java.util.List;
 
 @SpringBootApplication
 @EnableTransactionManagement
@@ -18,19 +17,28 @@ public class DmartApplication {
 		SpringApplication.run(DmartApplication.class, args);
 	}
 
+//	It help in map one class to another class
 	@Bean
 	public ModelMapper createModelMapper(){
 		return new ModelMapper();
 	}
 
+
+
+//	Created a bean of StockProduct
 	@Bean
 	public StockProduct createObjectOfStockProduct(){
 		return new StockProduct();
 	}
 
+
+
+//	Created a bean of Transection
 	@Bean
 	public Transection createTransection(){
 		return new Transection();
 	}
+
+
 
 }

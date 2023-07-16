@@ -1,7 +1,6 @@
 package com.storeManager.Dmart.controllers;
 
-import com.storeManager.Dmart.Services.TransectionService;
-import com.storeManager.Dmart.dto.StoreProductQuantity;
+import com.storeManager.Dmart.services.TransectionService;
 import com.storeManager.Dmart.models.Transection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +17,7 @@ public class TransectionController {
     @Autowired
     private TransectionService transectionService;
 
+//    It show all transection which are happening between 2 stores
     @GetMapping("/getAllTransection")
     public ResponseEntity<List<Transection>> total_quantity_of_all_stock_for_each_store(){
 

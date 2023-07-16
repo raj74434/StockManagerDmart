@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//User profile details available in this table
 @Data
 @Entity
 public class User {
@@ -16,6 +17,8 @@ public class User {
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private String passwrod;
+    private String password;
+
+    private String role;
 
 }

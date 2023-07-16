@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
+//  Repository of stock of store
 public interface StockProductRepo extends JpaRepository<StockProduct,Integer> {
 
 

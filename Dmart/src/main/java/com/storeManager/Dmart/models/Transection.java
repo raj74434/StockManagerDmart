@@ -16,14 +16,14 @@ public class Transection {
     private LocalDateTime dateTime_Of_sending;
 
     @ManyToOne
-    private Store sender_store;
+    private Store sender_store;      // from which store product is sending
     @ManyToOne
-    private Store reciver_store;
+    private Store reciver_store;     // which store is reciving product
 
     @OneToOne
-    private Product products_sending;
+    private Product products_sending; //Product which is sending
 
-    private Integer total_amount_of_products;
+    private Integer total_amount_of_products;   //total quantity which sending
 
 
 

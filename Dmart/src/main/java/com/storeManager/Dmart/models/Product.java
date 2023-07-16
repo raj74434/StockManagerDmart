@@ -8,19 +8,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Data
+@Data  //Lombok
 public class Product {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer productId;
+    private Integer productId;        //unique productId which generate automatically
 
-    private String productName;
-    private String productCompany;
+    private String productName;       // Name of product
+    private String productCompany;    // Name of product company
 
-    private Integer market_price;
+    private Integer market_price;     //MRP of product
 
-    private Integer sales_price;
+    private Integer sales_price;      //Price on which dmart is selling
 
 
 

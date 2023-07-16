@@ -16,13 +16,13 @@ public class LoginController {
     @Autowired
     private UserRepo userRepo;
 
-
+//  This api help in login
     @GetMapping("/signIn")
     public ResponseEntity<User> getLogin(Authentication auth){
-        System.out.println(auth.getName()+"    "+auth.getCredentials());
 
-        User u=userRepo.findByEmail(auth.getName());
-        if(u !=null)return new ResponseEntity<>(u, HttpStatus.ACCEPTED);
+
+        User user=userRepo.findByEmail(auth.getName());
+        if(user !=null)return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
         else throw new BadCredentialsException(("No user found with this number"));
     }
 
